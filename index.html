@@ -152,4 +152,32 @@
     <h2>Did You Know?</h2>
     <ul>
       <li>Over <strong>500,000</strong> Vietnam veterans were diagnosed with PTSD after the war</li>
-      <li>Nearly <strong>one third</strong> struggled with substance
+      <li>Nearly <strong>one third</strong> struggled with substance abuse to cope with trauma</li>
+      <li>Veterans formed tight lifelong bonds, but the loss of fellow soldiers haunted many</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>In memory of all who carried the war home with them.</p>
+    <p>“We were young. We were brave. But we were never the same.”</p>
+  </footer>
+
+  <script>
+    // Scroll reveal animation
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const secTop = sec.getBoundingClientRect().top;
+        if (secTop < trigger) sec.classList.add('visible');
+      });
+    });
+
+    // Trigger on load for top content
+    window.addEventListener('load', () => {
+      sections[0].classList.add('visible');
+    });
+  </script>
+
+</body>
+</html>
