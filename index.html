@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The War That Never Left</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d1117;
+      color: #f0f6fc;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(to right, #222, #333);
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #58a6ff;
+    }
+
+    header p {
+      font-style: italic;
+      color: #c9d1d9;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .quote {
+      background-color: #161b22;
+      border-left: 4px solid #58a6ff;
+      padding: 20px;
+      margin: 30px 0;
+      transition: background-color 0.4s;
+    }
+
+    .quote:hover {
+      background-color: #21262d;
+    }
+
+    .quote em {
+      color: #8b949e;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .event {
+      background: #1f2937;
+      border-radius: 10px;
+      padding: 20px;
+      border-left: 5px solid #e5534b;
+      transition: transform 0.4s;
+    }
+
+    .event:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      background-color: #161b22;
+      text-align: center;
+      padding: 40px 20px;
+      color: #8b949e;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The War That Never Ended</h1>
+    <p>How the Vietnam War followed soldiers home</p>
+  </header>
+
+  <section id="intro">
+    <h2>Coming Home—But Never the Same</h2>
+    <p>For many Vietnam veterans, returning home didn’t mean peace. It meant silence, misunderstanding, and memories too heavy to carry. The war was over—but the battle within was just beginning.</p>
+  </section>
+
+  <section class="quote">
+    <p>“I came back to a world that didn’t know me. I left part of myself in the jungle, and what returned… wasn’t whole.”</p>
+    <em>— Vietnam veteran, 1974</em>
+  </section>
+
+  <section>
+    <h2>Timeline of Invisible Wounds</h2>
+    <div class="timeline">
+      <div class="event">
+        <h3>1969: Lost a Best Friend</h3>
+        <p>A fellow soldier was killed by a landmine. Survivors often blamed themselves—called “survivor’s guilt.”</p>
+      </div>
+      <div class="event">
+        <h3>1971: Numbness Sets In</h3>
+        <p>Repeated trauma led to emotional shutdown. Some veterans described it as "watching your soul rot from the inside."</p>
+      </div>
+      <div class="event">
+        <h3>1975: Return Without a Welcome</h3>
+        <p>Many came home to protest signs, not parades. They buried their pain in silence, often untreated.</p>
+      </div>
+      <div class="event">
+        <h3>1982: The Wall Is Built</h3>
+        <p>The Vietnam Veterans Memorial was dedicated. For many, it was the first time they felt seen again.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <p>“There were nights I screamed without knowing why. Days I couldn’t leave the house. I was still in Vietnam, even in my sleep.”</p>
+    <em>— Anonymous letter to the VA, 1980s</em>
+  </section>
+
+  <section>
+    <h2>Did You Know?</h2>
+    <ul>
+      <li>Over <strong>500,000</strong> Vietnam veterans were diagnosed with PTSD after the war</li>
+      <li>Nearly <strong>one third</strong> struggled with substance abuse to cope with trauma</li>
+      <li>Veterans formed tight lifelong bonds, but the loss of fellow soldiers haunted many</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>In memory of all who carried the war home with them.</p>
+    <p>“We were young. We were brave. But we were never the same.”</p>
+  </footer>
+
+  <script>
+    // Scroll reveal animation
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const secTop = sec.getBoundingClientRect().top;
+        if (secTop < trigger) sec.classList.add('visible');
+      });
+    });
+
+    // Trigger on load for top content
+    window.addEventListener('load', () => {
+      sections[0].classList.add('visible');
+    });
+  </script>
+
+</body>
+</html>
 
