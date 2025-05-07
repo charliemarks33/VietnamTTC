@@ -16,8 +16,9 @@
 
     header {
       background: linear-gradient(to right, #222, #333);
-      padding: 60px 20px 20px 20px;
+      padding: 60px 20px;
       position: relative;
+      text-align: center;
     }
 
     header h1 {
@@ -26,13 +27,15 @@
       margin-bottom: 10px;
     }
 
-    header .nav-corner {
+    .nav-corner {
       position: absolute;
       top: 20px;
       left: 20px;
+      color: #f0f6fc;
+      font-weight: bold;
     }
 
-    header .flag {
+    .flag {
       position: absolute;
       top: 20px;
       right: 20px;
@@ -73,7 +76,7 @@
     }
 
     .quote-img {
-      max-width: 100%;
+      width: 100%;
       border-radius: 10px;
       margin: 20px 0;
       box-shadow: 0 0 10px #000;
@@ -88,13 +91,31 @@
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    .interactive {
+      background: #1f1f2e;
+      padding: 30px;
+      margin-top: 40px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .interactive:hover {
+      transform: scale(1.03);
+    }
+
+    .glow-text {
+      color: #00ffaa;
+      text-shadow: 0 0 10px #00ffaa;
+      font-weight: bold;
+      margin-top: 30px;
+      font-size: 1.3em;
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="nav-corner">
-      <strong>Menu</strong>
-    </div>
+    <div class="nav-corner">Menu</div>
     <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="American flag" class="flag">
     <h1>The War That Never Ended</h1>
     <p>Exploring the emotional aftermath of Vietnam</p>
@@ -109,42 +130,44 @@
   </nav>
 
   <section id="home" class="active">
-    <h2>Coming Home—But Never the Same</h2>
-    <p>For many Vietnam veterans, returning home didn’t mean peace. It meant silence, misunderstanding, and memories too heavy to carry. The war was over—but the battle within was just beginning.</p>
-    <blockquote>
-      “I came back to a world that didn’t know me. I left part of myself in the jungle, and what returned… wasn’t whole.” — Vietnam veteran, 1974
+    <h2>Welcome to the Journey</h2>
+    <p>This site explores how Vietnam veterans carried invisible wounds home with them. Through quotes, analysis, and multimedia, we examine the deep emotional effects of combat and loss.</p>
+    <div class="interactive">
+      <p>Hover over this box to feel how trauma never stays still. Like memory, it moves and reshapes over time.</p>
+    </div>
+    <div class="glow-text">“The war is over, but it lives in me.”</div>
+    <blockquote style="margin-top: 30px;">
+      “There were nights I screamed without knowing why. Days I couldn’t leave the house. I was still in Vietnam, even in my sleep.” — Anonymous veteran
     </blockquote>
-    <blockquote>
-      “There were nights I screamed without knowing why. Days I couldn’t leave the house. I was still in Vietnam, even in my sleep.” — Anonymous letter to the VA, 1980s
-    </blockquote>
+    <img class="quote-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Vietnam_Veterans_Memorial_Wall_Washington_DC.jpg/800px-Vietnam_Veterans_Memorial_Wall_Washington_DC.jpg" alt="Vietnam Veterans Memorial Wall">
   </section>
 
   <section id="tab1">
     <h2>“That night when Kiowa got wasted...”</h2>
     <p>“That night when Kiowa got wasted, I sort of sank down into the sewage with him.” (<em>The Things They Carried</em>, ch. 16, p. 150)</p>
-    <p>This moment speaks volumes about the guilt that soldiers often carried. When Kiowa died, it wasn’t just about a loss — it was about the shame and helplessness of surviving when someone close to you didn’t. The narrator sinking into the sewage is not just physical; it’s symbolic of emotional ruin. He’s literally buried in the waste of war, blaming himself, and unable to separate from that trauma. Many soldiers came home with this same type of survivor's guilt, where living felt harder than dying.</p>
-    <img src="https://cdn.britannica.com/75/147875-050-4D2A514C/Vietnam-War-US-soldiers.jpg" alt="Vietnam War soldiers" class="quote-img">
+    <p>This moment captures a profound kind of survivor’s guilt. The narrator isn’t just remembering the death of a friend—he’s sinking into it. The physical sewage represents the emotional waste that war leaves behind. It's about how loss traps you in a place where you can’t pull yourself out. Soldiers returning from Vietnam often found themselves in this kind of internal hell—carrying the lives of the dead with them, unable to clean the memories off. What made it worse was how few people back home understood or even acknowledged that trauma.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Vietnam_War_patrol.jpg" alt="Vietnam War patrol" class="quote-img">
   </section>
 
   <section id="tab2">
     <h2>“You become part of a tribe...”</h2>
     <p>“You become part of a tribe and you share the same blood.” (<em>The Things They Carried</em>, ch. 20)</p>
-    <p>War breaks people apart but also forms intense, unbreakable bonds. The quote shows how soldiers felt like they were in something deeper than friendship—it was a tribal identity. When you go through something as brutal and dehumanizing as combat, you cling to those around you because no one else can understand. Veterans often came home and found they couldn’t connect with anyone besides their fellow soldiers. That isolation only made the pain worse.</p>
-    <img src="https://media.defense.gov/2015/Jul/27/2001265251/-1/-1/0/150727-F-ZZ999-151.JPG" alt="Vietnam war brotherhood" class="quote-img">
+    <p>O'Brien isn't just talking about camaraderie—he's talking about survival through shared trauma. Soldiers formed a brotherhood not by choice, but out of emotional necessity. Their bond became sacred because it was built in the worst moments of their lives. The battlefield created a kind of family that couldn’t be replicated once they came home. That made reintegration nearly impossible. Many veterans said they felt more at home in combat than they did in civilian life, because only their fellow soldiers understood what it was like to live between life and death every single day.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Vietnam_War_1966_Soldiers.jpg/800px-Vietnam_War_1966_Soldiers.jpg" alt="Vietnam War Brotherhood" class="quote-img">
   </section>
 
   <section id="tab3">
     <h2>“The last battle ended 20 years ago...”</h2>
     <p>“The last battle ended 20 years ago, but if the end of a war is peace, we’re still waiting for it.” (Tobias Wolff, "After the Crusade")</p>
-    <p>This quote expresses how veterans felt stuck in the war even decades later. Physically, they returned home, but mentally, emotionally, they were still in Vietnam. They were haunted by flashbacks, broken relationships, and constant anxiety. Peace isn’t just the absence of violence; it’s the presence of healing. For many, that healing never came, which is why Wolff’s words hit so hard. They show how war doesn’t really end when the fighting stops.</p>
-    <img src="https://cdn.britannica.com/23/94423-050-2D2B1F41/Vietnam-Veterans-Memorial-Washington-DC.jpg" alt="Vietnam veterans memorial" class="quote-img">
+    <p>This line echoes what so many Vietnam veterans felt after coming home: the shooting stopped, but the war didn’t. The pain, nightmares, anxiety, and emotional numbness stuck with them for decades. Peace never came because their minds were still at war—still rewinding the past, replaying moments of death, and questioning why they survived. Tobias Wolff’s quote is a reminder that veterans don’t just need parades. They need healing, and many never got it. That’s why the war didn’t end for them—it simply changed location.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Vietnam_Veterans_1982.jpg/800px-Vietnam_Veterans_1982.jpg" alt="Vietnam veterans gathering" class="quote-img">
   </section>
 
   <section id="tab4">
     <h2>“Is it possible to win a battle...”</h2>
     <p>“Is it possible to win a battle and lose the war?” (Lessons from the Tet Offensive)</p>
-    <p>The Tet Offensive was technically a military loss for the North Vietnamese, but it became a huge psychological blow to the U.S. Back home, Americans started to realize that even our wins looked like losses. Soldiers were putting their lives on the line and watching friends die, all while the war seemed more and more pointless. The quote sums up how morale eroded: you can fight and win, but still feel like nothing has been accomplished. For many veterans, that made their sacrifices feel ignored.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/HueCityTetOffensive.jpg/800px-HueCityTetOffensive.jpg" alt="Tet Offensive battle scene" class="quote-img">
+    <p>This quote summarizes the heartbreak of the Vietnam War. Soldiers could execute perfect missions, fight bravely, and still feel defeated. The Tet Offensive was a major shock that flipped the war’s narrative. Even though U.S. troops technically won, public confidence collapsed. For the soldiers, this meant that their sacrifices seemed to have no meaning. Many felt betrayed—by the media, by the government, and by the silence they faced at home. It wasn’t just about fighting anymore. It became a question of whether what they were doing mattered at all.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Hue_City_1968_Tet.jpg/800px-Hue_City_1968_Tet.jpg" alt="Hue City Tet Offensive" class="quote-img">
   </section>
 
   <script>
